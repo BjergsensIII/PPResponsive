@@ -30,13 +30,17 @@ nav{
 }
 
 .logo{
-    width: 140px;
+    width: 100px;
+    height: 50%;
+    position: relative;
+    right: 100px;
 }
 
 nav ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
+    font-weight:bolder;
 }
 
 nav ul li a{
@@ -53,7 +57,7 @@ nav ul li a::after{
     background: #ff5e00;
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -5px;
     transition: 0.5s;
     
 }
