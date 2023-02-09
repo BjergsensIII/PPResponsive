@@ -31,6 +31,10 @@ nav{
     flex-wrap: wrap;
 }
 
+p{
+    font-size: large;
+}
+
 .logo{
     width: 80px;
 }
@@ -86,6 +90,7 @@ a{
 .h2-italic{
     font-weight: 100;
     font-size: 30px;
+    margin-top: 20px;
 }
 
 
@@ -185,7 +190,7 @@ a{
 }
 
 .skills-list div{
-    background: lightgrey;
+    background: rgb(95, 95, 95);
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -216,3 +221,103 @@ a{
     background:#ff782a;
     transform: translateY(-10px);
 }
+
+
+/* ---------  PROJECT section --------- */
+
+
+#project{
+    padding: 50px 0;
+}
+
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.project{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.project:hover img{
+    transform: scale(1.1);
+}
+
+.project:hover .layer{
+    height: 100%;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), #000);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 18px;
+    transition: height 0.7s;
+}
+
+.layer h3{
+    font-weight: 500;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+
+}
+
+.layer a{
+    margin-top: 20px;
+    color:white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 2px solid white;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .btn-show-all {
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  
+  .btn-show-all:hover {
+    background:#ff782a4e;
+  }
+  
+  .btn-show-all:hover > i {
+    transform: translateX(2px);
+  }
+  
+  .btn-show-all > i {
+    margin-left: 10px;
+    transform: translateX(0);
+    transition: transform 0.3s;
+  }
