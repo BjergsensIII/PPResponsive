@@ -406,7 +406,7 @@ nav .fa-solid{
 }
 @media only screen and (max-width:600px){
     #header{
-        background-image: url(../img/sfondo.jpg);
+        background-image: url(img/sfondo.jpg);
     }
 
     .header-text{
@@ -433,10 +433,8 @@ nav .fa-solid{
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
+        transition: right 0.5s;
 
-    }
-    nav i{
-        margin-right: -20px;
     }
 
     nav ul li{

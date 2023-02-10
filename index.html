@@ -15,7 +15,7 @@
         <div class="container">
             <nav>
                 <img src="../img/logo.png" alt="LOGO IMAGE" class="logo">
-                <ul class="sidemenu">
+                <ul id="sidemenu">
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#skills">SKILLS</a></li>
@@ -204,6 +204,7 @@
 
         let tablinks = document.getElementsByClassName("tab-links");
         let tabcontents = document.getElementsByClassName("tab-contents");
+
         function opentab(tabname){
             for(tablink of tablinks){
                 tablink.classList.remove("active-link");
@@ -215,21 +216,23 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+    </script>
 
 
-        /* ----------- side menu ----------- */
+        <!-- ----------- side menu ----------- -->
 
 
-        let sidemenu = document.getElementById("sidemenu");
+    <script>
 
         function openmenu(){
-            sidemenu.style.right = "0px";
+            document.getElementById("sidemenu").style.right = "-50px";
+
         }
 
         function closemenu(){
-            sidemenu.style.right = "-200px";
+            document.getElementById("sidemenu").style.right = "-200px";
         }
-
+                /*PROBLEM HERE*/
 
 
 
