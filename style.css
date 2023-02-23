@@ -286,37 +286,38 @@ a{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 20px;
     text-align: center;
     font-size: 18px;
     transition: height 0.5s;
 }
 
 .layer h3{
-    font-weight: 500;
+    font-weight: 600;
     font-size: 30px;
-    color: black;
+    color:#ff5e00;
     margin-bottom: 20px;
 
 }
 
+.project .layer{
+    bottom:-50px;
+}
+
 .layer p{
+    font-weight: 500;
     font-size: 22px;
     color: black;
     align-items: center;
-    flex-direction: column;
 }
 
-.layer a{
-    margin-top: 20px;
+.layer .code a i{
+    margin-bottom: 20px;
     color:black;
     text-decoration: none;
-    font-size: 30px;
-}
-.layer .code{
-    font-size: 20px;
-    color:#ff5e00;
-
+    font-size: 25px;
+    padding: 20px;
+    top: 20px;
 }
 
 .btn {
@@ -476,6 +477,28 @@ nav .fa-solid{
         top: 25px;
         left: 25px;
         cursor: pointer;
+    }
+
+    .project .layer{
+        bottom: -15px;
+    }
+
+    .layer h3{
+        font-size: 20px;
+    }
+    
+    .layer p{
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    .layer .code a i{
+        margin-bottom: 20px;
+        color:black;
+        text-decoration: none;
+        font-size: 25px;
+        padding: 20px;
+        top: 20px;
     }
 
     .sub-title{
