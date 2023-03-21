@@ -9,6 +9,29 @@
     <link rel="icon" href="/img/title-img.png" type="image/icon type">
     <script src="https://kit.fontawesome.com/560cbdfe85.js" crossorigin="anonymous"></script>
     <title>Personal Portfolio</title>
+
+
+    <script  src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous"></script>
+    <script>
+        const form = document.getElementById('myForm')
+        const msg = document.getElementById("msg")
+
+    function SubForm (){
+        $.ajax({
+            url:'https://api.apispreadsheets.com/data/xNk6t4G0zuLALeYB/',
+            type:'post',
+            data:$("#myForm").serializeArray(),
+            success: function(){
+            alert("Form Data Submitted :)")
+            $("#myForm")[0].reset();
+        },
+            error: function(){
+            alert("There was an error :(")
+            }
+        });
+
+    }
+    </script>
 </head>
 
 <body>
@@ -192,13 +215,12 @@
                     <a href="img/cv.pdf" download class="btn btn2">DOWNLOAD MY CV</a>
                 </div>
                 <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2"><b>SUBMIT</b></button>
+                    <form id="myForm">
+                        <input type="text" name="full_name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                     </form>
-                    <span id="msg"></span>
+                    <button type="submit" class="btn btn2" onclick="SubForm()"><b>SUBMIT</b></button>
                 </div>
             </div>
         </div>
@@ -242,27 +264,6 @@
     </script>
 
 
-        <!-- ----------- contact form script by jamie wilson ----------- -->  
-
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzqBNm98xM2QEjfBqST0cmsrNOzf50nqablx7GhlmCKez6xzpBpkrMDf2XxYr-Vh3SoQA/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                }, 5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
-    
 </body>
 
 

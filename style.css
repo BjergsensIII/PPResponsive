@@ -559,13 +559,8 @@ nav .fa-solid{
 
 }
 
-#msg{
-    color: #ff5e00;
-    margin-top: -40px;
-    display: block;
-}
-
 /*Floating Back-To-Top Button*/
+
 #myBtn {
     position: fixed;
     bottom: 20px;
